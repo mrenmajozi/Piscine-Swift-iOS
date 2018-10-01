@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="Vdq-FV-4Mm">
             <objects>
-                <viewController id="aeZ-lg-SnC" customClass="ViewController" customModule="Moar_buttons" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aeZ-lg-SnC" customClass="ViewController" customModule="Make_some_code" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CTj-bn-1vX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,6 +53,9 @@
                                                         <state key="normal" title="AC">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="clearButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="gyc-Pq-GZk"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -95,7 +98,7 @@
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="tfi-fa-M5M"/>
+                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="U4I-hz-E15"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -110,7 +113,7 @@
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="sXX-pt-gJz"/>
+                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="Avg-nk-ED8"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -125,7 +128,7 @@
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="0aA-o6-DiQ"/>
+                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="68r-Pb-DrS"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -157,7 +160,7 @@
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="ATQ-mJ-nI7"/>
+                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="0RZ-sL-wZb"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -172,7 +175,7 @@
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="mUK-e5-j9S"/>
+                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="IaD-mH-NnZ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -187,7 +190,7 @@
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="ysV-E1-AUY"/>
+                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="WM4-0K-7J1"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -219,7 +222,7 @@
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="ZCP-AA-q3E"/>
+                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="Oxl-Q2-Nx3"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -234,7 +237,7 @@
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="TLn-Fh-eVn"/>
+                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="Veg-kn-PeZ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -249,7 +252,7 @@
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="KZX-c3-6tj"/>
+                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="NPA-7P-dwo"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -281,7 +284,7 @@
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="whN-nr-rJe"/>
+                                                            <action selector="numberButton:" destination="aeZ-lg-SnC" eventType="touchUpInside" id="oNe-e6-SFI"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -313,7 +316,7 @@
                         <viewLayoutGuide key="safeArea" id="9jM-Ra-UkW"/>
                     </view>
                     <connections>
-                        <outlet property="displayScreenLabel" destination="MMn-jr-Kj3" id="f5w-sT-rPp"/>
+                        <outlet property="displayScreenLabel" destination="MMn-jr-Kj3" id="BTT-rY-XRT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EtY-Ws-G6I" sceneMemberID="firstResponder"/>
