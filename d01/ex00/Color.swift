@@ -1,10 +1,10 @@
 import Foundation
 
 enum Color:String {
-    case Red = "Red"
-    case Lime = "Lime"
-    case Blue = "Blue"
-    case Amber = "Amber"
+    case Spades = "Black Spades"
+    case Hearts = "Red Hearts"
+    case Diamonds = "Red Diamonds"
+    case Clubs = "Black Clubs"
     
-    static let allColors = [Red, Lime, Blue, Amber]
+    static let allColors = [Spades, Hearts, Diamonds, Clubs]
 }
