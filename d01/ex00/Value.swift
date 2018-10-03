@@ -1,5 +1,3 @@
-import Foundation
-
 enum Value:Int {
     case Ace = 1
     case Two = 2

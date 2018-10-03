@@ -1,5 +1,3 @@
-import AppKit
-
 var card1 = Card(Color: Color.Spades, Value: Value.Ace)
 var card2 = Card(Color: Color.Spades, Value: Value.Ace)
 var card3 = Card(Color: Color.Spades, Value: Value.King)
