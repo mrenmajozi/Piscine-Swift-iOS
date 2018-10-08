@@ -15,11 +15,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     private let ecole42Coordinates: [CLLocationDegrees] = [48.8966491, 2.31834989999993]
     var locationManager = CLLocationManager()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
-        setInitialPosition(latitude: ecole42Coordinates[0], logitude: ecole42Coordinates[1])
+        setPosition(latitude: ecole42Coordinates[0], logitude: ecole42Coordinates[1])
         setAnnotation(latitude: ecole42Coordinates[0], logitude: ecole42Coordinates[1], title: "Ecole 42", subtitle: "Private, nonprofit and tuition-free computer programming school.")
     }
     
@@ -32,11 +31,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
      ** Start generation of updates
      */
     private func setUp() {
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        locationManager.distanceFilter = 10
-        locationManager.startUpdatingHeading()
+        if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
+            locationManager.requestWhenInUseAuthorization()
+        }
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.distanceFilter = 10
+            locationManager.startUpdatingHeading()
+        }
     }
     
     /*
@@ -48,7 +52,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
      *** Latitude Meters Radius
      *** Longitude Meters Radius
      */
-    private func setInitialPosition(latitude _latitude: CLLocationDegrees, logitude _longitude: CLLocationDegrees){
+    private func setPosition(latitude _latitude: CLLocationDegrees, logitude _longitude: CLLocationDegrees){
         let _location = CLLocation(latitude: _latitude, longitude: _longitude)
         let _regionRadius: CLLocationDistance = 100
         let _coordinateRegion = MKCoordinateRegionMakeWithDistance(_location.coordinate, _regionRadius, _regionRadius)
@@ -86,12 +90,25 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     /*
      * GEOLOCATE USER
-     ** 
+     ** Start Generation of User Current Location
      */
     @IBAction func currentLocationAction(_ sender: UIButton) {
-        
+        print("Get Current Location")
+        locationManager.startUpdatingLocation()
     }
     
+    /*
+     * EVENT: CHECKS FOR LOCATION UPDATE
+     ** Get User Current Location
+     ** Stop Generation of User Current Location
+     ** Update map region
+     */
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("Map Location Displayed Updated")
+        let _currentUserLocation:CLLocation = locations[0] as CLLocation
+        manager.stopUpdatingLocation()
+        setPosition(latitude: _currentUserLocation.coordinate.latitude, logitude:  _currentUserLocation.coordinate.longitude)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
