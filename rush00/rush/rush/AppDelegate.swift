@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Forum
+//  rush
 //
-//  Created by Njabulo MAJOZI on 2018/10/06.
-//  Copyright © 2018 mrenmajozi. All rights reserved.
+//  Created by Mfundo MTHETHWA on 2018/10/06.
+//  Copyright © 2018 Mfundo MTHETHWA. All rights reserved.
 //
 
 import UIKit
