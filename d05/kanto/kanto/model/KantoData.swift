@@ -9,7 +9,8 @@
 import Foundation
 
 class KantoData {
-    private static var places:[String] = ["Johannesburg", "Tembisa", "Ivory Park"]
+    private static var places:[String] = ["Pretoria", "Durban", "Cape Town"]
+    private static let pins:[String] = ["greenPin", "bluePin", "purplePin", "yellowPin", "redPin", "blackPin"]
     
     static func addPlace(nameOfPlace place: String) {
         KantoData.places.append(place)
@@ -25,5 +26,10 @@ class KantoData {
     
     static func getPlacesCount() -> Int {
         return KantoData.places.count
+    }
+    
+    static func getRandomPin() -> String {
+        let rand = Int(arc4random_uniform(UInt32(pins.count)))
+        return KantoData.pins[rand]
     }
 }

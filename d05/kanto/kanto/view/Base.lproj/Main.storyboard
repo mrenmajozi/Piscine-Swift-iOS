@@ -21,13 +21,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="J9a-pG-8Mv">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <connections>
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="6zt-Yp-En4"/>
                                 </connections>
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7bz-gy-Lcl">
-                                <rect key="frame" x="72" y="563" width="231" height="29"/>
+                                <rect key="frame" x="72" y="563" width="231" height="78"/>
                                 <segments>
                                     <segment title="Standard"/>
                                     <segment title="Satelite"/>
@@ -38,7 +38,7 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec0-GW-Jwi">
-                                <rect key="frame" x="324" y="563" width="24" height="28"/>
+                                <rect key="frame" x="324" y="563" width="24" height="77"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" image="current-location"/>
                                 <connections>
@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="97" y="-443"/>
         </scene>
         <!--Places-->
         <scene sceneID="wg7-f3-ORb">
@@ -122,11 +122,12 @@
                     <tabBarItem key="tabBarItem" title="Places" image="list" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="placesTableView" destination="iAO-iE-4jP" id="JEj-8b-YNY"/>
+                        <segue destination="9pv-A4-QxB" kind="show" identifier="showPlace" id="8BK-sC-RMv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+            <point key="canvasLocation" x="188" y="459"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -144,7 +145,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-943" y="-45"/>
         </scene>
     </scenes>
     <resources>
@@ -152,4 +153,7 @@
         <image name="list" width="16" height="16"/>
         <image name="placeholder" width="16" height="16"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8BK-sC-RMv"/>
+    </inferredMetricsTieBreakers>
 </document>
